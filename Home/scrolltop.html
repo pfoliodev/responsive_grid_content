@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Scroll to top en jQuery sans plugin</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="style.css" type="text/css" charset="utf-8"/>
+    <script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    $('#scroll').hide();
+    $(function(){
+        $(window).scroll(function(){
+           if ($(this).scrollTop() > 200){
+               $('#scroll').fadeIn();
+           }else{
+               $('#scroll').fadeOut();
+           }
+        });
+    });
+     $('#scroll a').click(function(){
+        $('body,html').animate({
+           scrollTop: 0
+        }, 300);
+        return false;
+     });
+    });
+    </script>
+  </head>
+  <body>
+      <div class="wrap">
+          <div class="container">
+           <h1>Un scroll top sans plugin</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor sem a libero mollis eu lobortis purus volutpat.
+              Donec posuere aliquet eros eu hendrerit. Suspendisse vestibulum posuere nulla, eget tincidunt ligula euismod eu.
+              Ut dictum orci sed magna aliquet fermentum eleifend augue blandit. Vivamus ut tortor vel felis euismod dictum non eu urna.
+              Donec quis nibh sit amet turpis vestibulum luctus. Ut sit amet nibh justo, eget ultricies velit.
+              Cras nec eros non nisl porta suscipit eget ac quam. Donec cursus ligula eu quam dictum interdum. Maecenas pellentesque lacinia bibendum.
+              Suspendisse sollicitudin semper nibh, non mollis mauris auctor vitae. Nunc consequat, orci nec
+              egestas luctus, risus elit convallis ante, sit amet suscipit velit quam et sapien.
+          </p>
+          <h1>Un scroll top sans plugin</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor sem a libero mollis eu lobortis purus volutpat.
+              Donec posuere aliquet eros eu hendrerit. Suspendisse vestibulum posuere nulla, eget tincidunt ligula euismod eu.
+              Ut dictum orci sed magna aliquet fermentum eleifend augue blandit. Vivamus ut tortor vel felis euismod dictum non eu urna.
+              Donec quis nibh sit amet turpis vestibulum luctus. Ut sit amet nibh justo, eget ultricies velit.
+              Cras nec eros non nisl porta suscipit eget ac quam. Donec cursus ligula eu quam dictum interdum. Maecenas pellentesque lacinia bibendum.
+              Suspendisse sollicitudin semper nibh, non mollis mauris auctor vitae. Nunc consequat, orci nec
+              egestas luctus, risus elit convallis ante, sit amet suscipit velit quam et sapien.
+          </p>
+          <h1>Un scroll top sans plugin</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor sem a libero mollis eu lobortis purus volutpat.
+              Donec posuere aliquet eros eu hendrerit. Suspendisse vestibulum posuere nulla, eget tincidunt ligula euismod eu.
+              Ut dictum orci sed magna aliquet fermentum eleifend augue blandit. Vivamus ut tortor vel felis euismod dictum non eu urna.
+              Donec quis nibh sit amet turpis vestibulum luctus. Ut sit amet nibh justo, eget ultricies velit.
+              Cras nec eros non nisl porta suscipit eget ac quam. Donec cursus ligula eu quam dictum interdum. Maecenas pellentesque lacinia bibendum.
+              Suspendisse sollicitudin semper nibh, non mollis mauris auctor vitae. Nunc consequat, orci nec
+              egestas luctus, risus elit convallis ante, sit amet suscipit velit quam et sapien.
+          </p>
+          <h1>Un scroll top sans plugin</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor sem a libero mollis eu lobortis purus volutpat.
+              Donec posuere aliquet eros eu hendrerit. Suspendisse vestibulum posuere nulla, eget tincidunt ligula euismod eu.
+              Ut dictum orci sed magna aliquet fermentum eleifend augue blandit. Vivamus ut tortor vel felis euismod dictum non eu urna.
+              Donec quis nibh sit amet turpis vestibulum luctus. Ut sit amet nibh justo, eget ultricies velit.
+              Cras nec eros non nisl porta suscipit eget ac quam. Donec cursus ligula eu quam dictum interdum. Maecenas pellentesque lacinia bibendum.
+              Suspendisse sollicitudin semper nibh, non mollis mauris auctor vitae. Nunc consequat, orci nec
+              egestas luctus, risus elit convallis ante, sit amet suscipit velit quam et sapien.
+          </p>
+          <h1>Un scroll top sans plugin</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor sem a libero mollis eu lobortis purus volutpat.
+              Donec posuere aliquet eros eu hendrerit. Suspendisse vestibulum posuere nulla, eget tincidunt ligula euismod eu.
+              Ut dictum orci sed magna aliquet fermentum eleifend augue blandit. Vivamus ut tortor vel felis euismod dictum non eu urna.
+              Donec quis nibh sit amet turpis vestibulum luctus. Ut sit amet nibh justo, eget ultricies velit.
+              Cras nec eros non nisl porta suscipit eget ac quam. Donec cursus ligula eu quam dictum interdum. Maecenas pellentesque lacinia bibendum.
+              Suspendisse sollicitudin semper nibh, non mollis mauris auctor vitae. Nunc consequat, orci nec
+              egestas luctus, risus elit convallis ante, sit amet suscipit velit quam et sapien.
+          </p>
+          <h1>Un scroll top sans plugin</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor sem a libero mollis eu lobortis purus volutpat.
+              Donec posuere aliquet eros eu hendrerit. Suspendisse vestibulum posuere nulla, eget tincidunt ligula euismod eu.
+              Ut dictum orci sed magna aliquet fermentum eleifend augue blandit. Vivamus ut tortor vel felis euismod dictum non eu urna.
+              Donec quis nibh sit amet turpis vestibulum luctus. Ut sit amet nibh justo, eget ultricies velit.
+              Cras nec eros non nisl porta suscipit eget ac quam. Donec cursus ligula eu quam dictum interdum. Maecenas pellentesque lacinia bibendum.
+              Suspendisse sollicitudin semper nibh, non mollis mauris auctor vitae. Nunc consequat, orci nec
+              egestas luctus, risus elit convallis ante, sit amet suscipit velit quam et sapien.
+          </p>
+          </div>
+          <div class="scroll" id="scroll"><a href="#">Top</a></div>
+
+      </div>
+  </body>
+</html>

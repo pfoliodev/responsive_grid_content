@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="onglet.css" media="screen" title="no title" charset="utf-8">
+    </head>
+    <body>
+        <div>
+            <ul class="tabs">
+                <li class="active"><a href="#home">Accueil</a></li>
+                <li><a href="#mentions">Mentions</a></li>
+                <li><a href="#about">A propos</a></li>
+            </ul>
+            <div class="tabs-content">
+                <div class="tab-content active" id="home">
+                  <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                  sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, tenetur ex hic ipsam earum enim repudiandae, veritatis atque, eos molestias quidem a, dolores! Iusto quo inventore, suscipit, soluta harum vel.</div>
+                <div class="tab-content" id="mentions"> consectetur adipisicing elit. Eius, tenetur ex hic ipsam earum enim repudiandae, veritatis atque, eos molestias quidem a, dolores! Iusto quo inventore, suscipit, soluta harum vel.</div>
+                <div class="tab-content" id="about">Eius, tenetur ex hic ipsam earum enim repudiandae, veritatis atque, eos molestias quidem a, dolores! Iusto quo inventore, suscipit, soluta harum vel.</div>
+            </div>
+        </div>
+        <div>
+            <ul class="tabs">
+                <li class="active"><a href="#home2">Accueil</a></li>
+                <li><a href="#mentions2">Mentions</a></li>
+                <li><a href="#about2">A propos</a></li>
+            </ul>
+            <div class="tabs-content">
+                <div class="tab-content active" id="home2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, tenetur ex hic ipsam earum enim repudiandae, veritatis atque, eos molestias quidem a, dolores! Iusto quo inventore, suscipit, soluta harum vel.</div>
+                <div class="tab-content" id="mentions2"> consectetur adipisicing elit. Eius, tenetur ex hic ipsam earum enim repudiandae, veritatis atque, eos molestias quidem a, dolores! Iusto quo inventore, suscipit, soluta harum vel.</div>
+                <div class="tab-content" id="about2">Eius, tenetur ex hic ipsam earum enim repudiandae, veritatis atque, eos molestias quidem a, dolores! Iusto quo inventore, suscipit, soluta harum vel.</div>
+            </div>
+        </div>
+
+<script type="text/javascript">
+!function() {
+/**
+* @param {Element} e
+* @param {boolean} success
+* @return {?}
+*/
+var hide = function(e, success) {
+if (void 0 === success) {
+  /** @type {boolean} */
+  success = true;
+}
+var container = e.parentNode;
+var parentElement = e.parentNode.parentNode.parentNode;
+var element = parentElement.querySelector(".tab-content.active");
+var el = parentElement.querySelector(e.getAttribute("href"));
+if (container.classList.contains("active")) {
+  return false;
+}
+if (parentElement.querySelector(".tabs .active").classList.remove("active"), container.classList.add("active"), success) {
+  element.classList.add("fade");
+  element.classList.remove("in");
+  /**
+   * @return {undefined}
+   */
+  var close = function() {
+    this.classList.remove("fade");
+    this.classList.remove("active");
+    el.classList.add("active");
+    el.classList.add("fade");
+    el.offsetWidth;
+    el.classList.add("in");
+    this.removeEventListener("transitionend", close);
+    this.removeEventListener("webkitTransitionEnd", close);
+    this.removeEventListener("oTransitionEnd", close);
+    this.removeEventListener("mozTransitionEnd", close);
+  };
+  element.addEventListener("transitionend", close);
+  element.addEventListener("webkitTransitionEnd", close);
+  element.addEventListener("oTransitionEnd", close);
+  element.addEventListener("mozTransitionEnd", close);
+} else {
+  el.classList.add("active");
+  element.classList.remove("active");
+}
+};
+/** @type {NodeList} */
+var codeSegments = document.querySelectorAll(".tabs a");
+/** @type {number} */
+var i = 0;
+for (;i < codeSegments.length;i++) {
+codeSegments[i].addEventListener("click", function(dataAndEvents) {
+  hide(this);
+});
+}
+/**
+* @param {string} allBindingsAccessor
+* @return {undefined}
+*/
+var update = function(allBindingsAccessor) {
+/** @type {string} */
+var raw = window.location.hash;
+/** @type {(Element|null)} */
+var el = document.querySelector('a[href="' + raw + '"]');
+if (!(null === el)) {
+  if (!el.classList.contains("active")) {
+    hide(el, void 0 !== allBindingsAccessor);
+  }
+}
+};
+window.addEventListener("hashchange", update);
+update();
+}();
+
+        </script>
+    </body>
+</html>
